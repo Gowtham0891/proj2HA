@@ -33,6 +33,7 @@ resource "aws_rds_cluster" "udacity_cluster-s" {
   skip_final_snapshot      = true
   storage_encrypted        = false
   master_username          = "udacity"
+  master_password          = "MyUdacityPassword"
   depends_on = [aws_rds_cluster_parameter_group.cluster_pg-s]
 }
 
